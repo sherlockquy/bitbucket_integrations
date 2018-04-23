@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  lambda:
+    build: .
+    ports:
+      - 5001:5001
+    volumes:
+      - .:/var/task:cached
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_DEBUG=1
+    command: ["pipenv", "run", "flask", "run", "-h", "0.0.0.0", "-p", "5001"]
