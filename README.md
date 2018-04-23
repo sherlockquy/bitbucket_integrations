@@ -22,3 +22,13 @@ $ docker-compose up
 ```bash
 $ docker-compose run --rm lambda pipenv shell
 ```
+
+### Deployment
+
+```bash
+$ docker-compose run --rm lambda pipenv shell
+$ # First time
+$ zappa deploy dev
+$ # From second time
+$ zappa update dev
+```
