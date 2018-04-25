@@ -119,12 +119,12 @@ def bitbucket():
     endpoint = 'https://0yw7gtq5ol.execute-api.ap-northeast-1.amazonaws.com/production/conversations/%s/messages' % conversation_id
     api_key = 'n4ni77wsMh7O6ST0YEMzP7RChvCCv6pJ8RdH4dzX'
     message = 'MU vo doi'
-    # data_test = request.get_json()
+    data_test = request.get_json()
 
     res = requests.post(
         endpoint,
         headers={'X-Api-Key': api_key},
-        data={'message': message}
+        data={'message': data_test["actor"]["username"]}
     )
 
     return 'OK'
