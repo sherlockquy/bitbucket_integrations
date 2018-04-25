@@ -121,7 +121,8 @@ def bitbucket():
     message = 'MU vo doi'
     data_test = request.get_json()
 
-    res = requests.post(
+    if data_test["commit_status"]["name"].find("feature-recognize-quy") >= 0:
+     requests.post(
         endpoint,
         headers={'X-Api-Key': api_key},
         data={'message': data_test["actor"]["username"]}
