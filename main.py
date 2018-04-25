@@ -123,8 +123,8 @@ def bitbucket():
     res = requests.post(
         endpoint,
         headers={'X-Api-Key': api_key},
-        data={'message': data_test}
+        data={'message': data_test['actors']['username']}
     )
 
-    return data_test
+    return data_test['actors']['username']
 
