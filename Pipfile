@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 zappa = "*"
 flask = "*"
+pip = "==9.0.3"
+requests = "*"
 
 [dev-packages]
 
