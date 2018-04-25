@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 
 from flask import Flask, jsonify, request
@@ -109,6 +110,8 @@ def move_trello_card_to_deployable():
     )
 
 
-@app.route('bitbucket', method=['POST'])
+@app.route('/bitbucket', methods=['POST'])
 def bitbucket():
-    return 'OK'
+    logging.info(request.get_json())
+    return 'SHERLOCK'
+
