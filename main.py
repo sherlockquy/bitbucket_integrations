@@ -113,7 +113,7 @@ def move_trello_card_to_deployable():
 @app.route('/bitbucket', methods=['POST'])
 def bitbucket():
     #logged skype
-    # logging.info(request.get_json())
+    logging.info(request.get_json())
     # Use API key to send skype message
     conversation_id = '19:da94633601ae4ce09181fb7107489afc@thread.skype'
     endpoint = 'https://0yw7gtq5ol.execute-api.ap-northeast-1.amazonaws.com/production/conversations/%s/messages' % conversation_id
